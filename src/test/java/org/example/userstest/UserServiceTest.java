@@ -48,9 +48,9 @@ public class UserServiceTest {
     private User createUser() {
         Random random = new Random();
         return new User()
-                .setId(86465 + random.nextInt())
-                .setUsername("test45" + random.nextInt())
-                .setEmail("testEmail" + random.nextInt() + "@gmail.com")
+                .setId(86465 + random.nextInt(100))
+                .setUsername("test45" + random.nextInt(100))
+                .setEmail("testEmail" + random.nextInt(100) + "@gmail.com")
                 .setFirstName("Jacky")
                 .setLastName("Smithh")
                 .setPassword("Krakow.2022")
@@ -61,9 +61,9 @@ public class UserServiceTest {
     private Store createOrder() {
         Random random = new Random();
         return new Store()
-                .setId(8535)
-                .setPetId(765 + random.nextInt())
-                .setQuantity(3 +random.nextInt())
+                .setId(8535 + random.nextInt(100))
+                .setPetId(765 + random.nextInt(100))
+                .setQuantity(3 +random.nextInt(100))
                 .setShipDate("2022-03-31T12:04:19.958Z")
                 .setStatus("placed")
                 .setComplete(true);
